@@ -6,11 +6,15 @@ def get_word():
     word = random.choice(words)
     return word.upper()
 
+
 """
-This function will be loaded when the start button (1) is pressed from the button options
+    This function will be loaded when the start button (1) 
+    is pressed from the button options
 """
+
+
 def start(word):
-    letter_dashes = " _ " * len(word)
+    letter_dashes = '-' * len(word)
     guessed_letter = []
     lives = 6
     print(letter_dashes)
@@ -26,10 +30,17 @@ def start(word):
                 guessed_letter.append(secret_letter)
             else:
                 print("well done", secret_letter, "is in the word")
-                #should add the letter in dashes
+                guessed_letter.append(secret_letter)
+
+                # changing to string
+                ocurences = list(letter_dashes)
+                find_ocurrences = [i for i, letter in enumerate(word) if letter == secret_letter]
+                for index in find_ocurrences:
+                    ocurences[index] = secret_letter
+                letter_dashes = "".join(ocurences)
         else:
             print("enter letters between A to Z")
-        # print("the word is: ", word)
+        print("the word is: ", word)
         print("\n ====================== \n")
         print(" \n Word: ", letter_dashes, "\n")
         print("Guessed Letters: ", guessed_letter)
