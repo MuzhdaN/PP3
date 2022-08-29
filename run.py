@@ -1,3 +1,11 @@
+import random
+from wordslist import words
+
+
+def get_word():
+    word = random.choice(words)
+    return word.upper()
+
 
 def display_rules():
     print("""
@@ -28,7 +36,7 @@ def game_options():
     print("press 2 to read the rules.")
     chose = input(" ")
     if chose == "1":
-        print("staring game..")
+        start(get_word())
     elif chose == "2":
         display_rules()
     else:
@@ -78,3 +86,5 @@ def welcome_msg():
 
 welcome_msg()
 
+
+get_word()
