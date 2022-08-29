@@ -1,23 +1,24 @@
 import random
 from wordslist import words
 
+from snowman import steps
+
 
 def get_word():
     word = random.choice(words)
     return word.upper()
 
 
-"""
-    This function will be loaded when the start button (1) 
-    is pressed from the button options
-"""
-
-
 def start(word):
+    """
+        This function will be loaded when the start button (1) 
+        is pressed from the button options
+    """
     letter_dashes = '-' * len(word)
     guessed_letter = []
-    lives = 6
+    lives = 5
     print(letter_dashes)
+    print(display_snowman(lives))
     while lives > 0:
         secret_letter = input("please enter an alphabet: ").upper()
         if len(secret_letter) == 1 and secret_letter.isalpha():
@@ -42,6 +43,7 @@ def start(word):
             print("enter letters between A to Z")
         print("the word is: ", word)
         print("\n ====================== \n")
+        print(display_snowman(lives))
         print(" \n Word: ", letter_dashes, "\n")
         print("Guessed Letters: ", guessed_letter)
         print("lives:", lives)
@@ -133,6 +135,118 @@ def welcome_msg():
     # Displaying game options
     game_options()    
 
+
+
+
+    steps = [
+      """
+                  /`         \  
+                 /'           \`
+                /'              \
+   __,. -- ~~ ~|                 |~ ~~ -- . __
+               |                 |
+               \                 /
+                `._           _.'
+                   ^~- . -  ~^
+
+      """,
+      """ 
+       
+             _\/                 \/_
+              \\   {`------'}    //
+               \\  /`---/',`\\  //
+                \/'     | |\ \`//
+                /'      | | \/ /\
+   __,. -- ~~ ~|        `\|      |~ ~~ -- . __
+               |                 |
+               \                 /
+                `._           _.'
+                   ^~- . -  ~^
+
+      """,
+      """           
+                   __________       
+                  /          \        
+                 ()          ()        
+                  \          /          
+             _\/   \        /    \/_
+              \\   {`------'}    //
+               \\  /`---/',`\\  //
+                \/'     | |\ \`//
+                /'      | | \/ /\
+   __,. -- ~~ ~|        `\|      |~ ~~ -- . __
+               |                 |
+               \                 /
+                `._           _.'
+                   ^~- . -  ~^
+
+      """,
+      """ 
+                    .------,
+                    |______|
+                   _|_Ll___|_
+                  [__________]          
+                  /          \        
+                 ()          ()        
+                  \          /          
+             _\/   \        /    \/_
+              \\   {`------'}    //
+               \\  /`---/',`\\  //
+                \/'     | |\ \`//
+                /'      | | \/ /\
+   __,. -- ~~ ~|        `\|      |~ ~~ -- . __
+               |                 |
+               \                 /
+                `._           _.'
+                   ^~- . -  ~^
+
+      """,
+      """ 
+                    .------,
+                    |______|
+                   _|_Ll___|_
+                  [__________]         
+                  /          \        
+                 ()  o  o    ()        
+                  \          /          
+             _\/   \        /    \/_
+              \\   {`------'}    //
+               \\  /`---/',`\\  //
+                \/'  o  | |\ \`//
+                /'      | | \/ /\
+   __,. -- ~~ ~|    o   `\|      |~ ~~ -- . __
+               |                 |
+               \    o            /
+                `._           _.'
+                   ^~- . -  ~^
+
+      """,
+      """ 
+                    .------,
+      .\/.          |______|
+    _\_}{_/_       _|_Ll___|_
+     / }{ \       [__________]          .\/.
+      '/\'        /          \        _\_\/_/_
+                 ()  o  o    ()        / /\ \
+                  \ ~~~   .  /          '/\'
+             _\/   \ '...'  /    \/_
+              \\   {`------'}    //
+               \\  /`---/',`\\  //
+                \/'  o  | |\ \`//
+                /'      | | \/ /\
+   __,. -- ~~ ~|    o   `\|      |~ ~~ -- . __
+               |                 |
+               \    o            /
+                `._           _.'
+                   ^~- . -  ~^
+
+      """,
+    ]
+
+
+def display_snowman(lives):
+
+    return steps[lives]
 
 welcome_msg()
 get_word()
