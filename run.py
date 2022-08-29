@@ -32,7 +32,7 @@ def start(word):
                 print("well done", secret_letter, "is in the word")
                 guessed_letter.append(secret_letter)
 
-                # changing to string
+                # changing the dashed lines to string list
                 ocurences = list(letter_dashes)
                 find_ocurrences = [i for i, letter in enumerate(word) if letter == secret_letter]
                 for index in find_ocurrences:
@@ -46,7 +46,16 @@ def start(word):
         print("Guessed Letters: ", guessed_letter)
         print("lives:", lives)
         print("\n")
-
+    
+    # condition for win and lose in the game
+        if lives == 0:
+            print("You lost, try again later")
+            print("the correct word was: ", word)
+        elif len(letter_dashes) == len(word):
+            if letter_dashes == word:
+                print("You won, Well done")
+                break
+            
 
 def display_rules():
     print("""
@@ -126,6 +135,4 @@ def welcome_msg():
 
 
 welcome_msg()
-
-
 get_word()
