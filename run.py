@@ -1,3 +1,17 @@
+
+def game_options():
+    print("How you want to start? ")
+    print("press 1 to start the game.")
+    print("press 2 to read the rules.")
+    chose = input(" ")
+    if chose == "1":
+        print("staring game..")
+    elif chose == "2":
+        display_rules()
+    else:
+        print("you have only two options")
+
+
 # this function will appear at the beginning of the game
 def welcome_msg():
     print(
