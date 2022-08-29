@@ -1,4 +1,26 @@
 
+def display_rules():
+    print("""
+    Rules Of The Game:
+        A secret word will be given.
+        The user needs to find out the word.
+        The user will be given specifc chances.
+        If the user lose all the chances the game will 
+        be over.
+        if the user was able to find out the correct letters 
+        for the word before losing all the chances, he will
+        win the game.
+    """)
+    print("Do you want to start the game? Y/N")
+    y_n_answer = input("Y/N: ")
+    if y_n_answer.upper() == "Y":
+        print("Start game")
+    elif y_n_answer.upper() == "N":
+        welcome_msg()
+    else:
+        print("please enter y/n ")
+
+
 def game_options():
     print("How you want to start? ")
     print("press 1 to start the game.")
