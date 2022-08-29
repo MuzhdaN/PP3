@@ -6,6 +6,36 @@ def get_word():
     word = random.choice(words)
     return word.upper()
 
+"""
+This function will be loaded when the start button (1) is pressed from the button options
+"""
+def start(word):
+    letter_dashes = " _ " * len(word)
+    guessed_letter = []
+    lives = 6
+    print(letter_dashes)
+    while lives > 0:
+        secret_letter = input("please enter an alphabet: ").upper()
+        if len(secret_letter) == 1 and secret_letter.isalpha():
+            if secret_letter in guessed_letter:
+                print(("you have alredy guess the letter: ", secret_letter))
+                lives -= 1
+            elif secret_letter not in word:
+                print("the letter is not in the word")
+                lives -= 1 
+                guessed_letter.append(secret_letter)
+            else:
+                print("well done", secret_letter, "is in the word")
+                #should add the letter in dashes
+        else:
+            print("enter letters between A to Z")
+        # print("the word is: ", word)
+        print("\n ====================== \n")
+        print(" \n Word: ", letter_dashes, "\n")
+        print("Guessed Letters: ", guessed_letter)
+        print("lives:", lives)
+        print("\n")
+
 
 def display_rules():
     print("""
