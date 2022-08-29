@@ -1,3 +1,41 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
+# this function will appear at the beginning of the game
+def welcome_msg():
+    print(
+        """
+    ||::|:||   .--------,
+    |:||:|:|   |_______ /        .-.
+    ||::|:|| ."`  ___  `".    {\('v')/}
+    \\\/\///:  .'`   `'.  ;____`(   )'____
+     \====/ './  o   o  \|~     ^" "^   //
+      \\//   |   ())) .  |   Ready to   /
+       ||     \ `.__.'  /|              //
+       ||   _{``-.___.-'\|    Play???   /
+       || _." `-.____.-'`|    ___       //
+       ||`        __ \   |___/   \_______/
+     ."||        (__) \    \|     /
+    /   `\/       __   vvvvv'\___/
+    |     |      (__)        |
+     \___/\                 /
+       ||  |     .___.     |
+       ||  |       |       |
+       ||.-'       |       '-.
+       ||          |          )
+       ||----------'---------'
+        """
+    )
+    print("Welcome to the game!")
+    # ASk username
+    while True:
+        name = input("What should we call you? \n") 
+        if name.isalpha():
+            print("We are happy to have you " + name)
+            print("Hope you have fun and learn!")
+            break
+        else:
+            print("\n plese enter string \n")
+
+    # Displaying game options
+    game_options()    
+
+
+welcome_msg()
