@@ -57,20 +57,23 @@ def start(word):
     
     # condition for win and lose in the game
         if lives == 0:
-            print("You lost, try again later")
-            print("the correct word was: ", word)
+            print(f"{Fore.RED}YOU LOST, TRY AGAIN LATER")
+            print(f"{Fore.YELLOW}the correct word was: {Fore.GREEN}{word}\n")
+            print(f"{Fore.YELLOW} Do you want to play again? Y/N")
+            re_start()
         elif len(letter_dashes) == len(word):
             if letter_dashes == word:
                 print(Fore.GREEN + snowman.WIN)
                 print(f"{Fore.YELLOW}Congratulation... \n")
                 print(f"{Fore.BLUE}YOU {Fore.GREEN}WON!!!\n")
                 print(f"{Fore.MAGENTA}we are excited for you!\n")
-                break
-            
+                print("Do you want to play again? Y/N")
+                re_start()
+                     
 
 def game_options():
-    print("\n~~~~~~~~~~~~~")
-    print("\n How you want to start? ")
+    print("\n")
+    print(f"\n{Fore.MAGENTA} How you want to start? ")
     print("press 1 to start the game.")
     print("press 2 to read the rules.")
     chose = input(" ")
@@ -131,15 +134,22 @@ def display_snowman(lives):
 
 def display_rules():
     print(snowman.RULES)
-    print("Do you want to start the game? Y/N")
+    print(f"{Fore.YELLOW} Do you want to start the game? Y/N")
+    re_start()
+    
+
+def re_start():
     y_n_answer = input("Y/N: ")
     if y_n_answer.upper() == "Y":
-        start(ge)
+        start(get_word())
     elif y_n_answer.upper() == "N":
         welcome_msg()
     else:
-        print("please enter y/n ")
+        print(f"{Fore.RED} please enter y/n ")
 
 
 welcome_msg()
 get_word()
+
+
+
