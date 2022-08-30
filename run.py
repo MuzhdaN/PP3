@@ -49,7 +49,7 @@ def start(word):
         else:
             print(f"{Fore.YELLOW}Enter Letters Between A to Z")
         print("the word is: ", word)
-        print("*****************************************************")
+        # print("*****************************************************")
         print(display_snowman(lives))
         print("Word: ", letter_dashes)
         print("Guessed Letters: ", guessed_letter)
@@ -68,28 +68,6 @@ def start(word):
                 break
             
 
-def display_rules():
-    print("""
-    Rules Of The Game:
-        A secret word will be given.
-        The user needs to find out the word.
-        The user will be given specifc chances.
-        If the user lose all the chances the game will 
-        be over.
-        if the user was able to find out the correct letters 
-        for the word before losing all the chances, he will
-        win the game.
-    """)
-    print("Do you want to start the game? Y/N")
-    y_n_answer = input("Y/N: ")
-    if y_n_answer.upper() == "Y":
-        print("Start game")
-    elif y_n_answer.upper() == "N":
-        welcome_msg()
-    else:
-        print("please enter y/n ")
-
-
 def game_options():
     print("\n~~~~~~~~~~~~~")
     print("\n How you want to start? ")
@@ -101,13 +79,14 @@ def game_options():
     elif chose == "2":
         display_rules()
     else:
-        print("you have only two options")
+        print(f"{Fore.RED}Please Choose 1 or 2")
         game_options()
         
 
 # this function will appear at the beginning of the game
 def welcome_msg():
     print(
+        Fore.MAGENTA +
         """
     ||::|:||   .--------,
     |:||:|:|   |_______ /        .-.
@@ -130,132 +109,37 @@ def welcome_msg():
        ||----------'---------'
         """
     )
-    print("Welcome to the game!")
-    # ASk username
+    print("Welcome to the Snowman!\n")
+    # keep asking for name untill S
     while True:
         name = input("What should we call you? \n") 
         if name.isalpha():
-            print("We are happy to have you " + name)
-            print("Hope you have fun and learn!")
+            print(f"\tWe are happy to have you {Fore.BLUE}{name}")
+            print(f"\t{Fore.YELLOW}Hope you have fun and learn!")
             break
         else:
-            print("\n plese enter string \n")
+            print(f"\n{Fore.RED}You Can Only Use Alphabets (A_Z)\n")
 
     # Displaying game options
     game_options()    
 
 
-
-
-    steps = [
-      """
-                  /`         \  
-                 /'           \`
-                /'              \
-   __,. -- ~~ ~|                 |~ ~~ -- . __
-               |                 |
-               \                 /
-                `._           _.'
-                   ^~- . -  ~^
-
-      """,
-      """ 
-       
-             _\/                 \/_
-              \\   {`------'}    //
-               \\  /`---/',`\\  //
-                \/'     | |\ \`//
-                /'      | | \/ /\
-   __,. -- ~~ ~|        `\|      |~ ~~ -- . __
-               |                 |
-               \                 /
-                `._           _.'
-                   ^~- . -  ~^
-
-      """,
-      """           
-                   __________       
-                  /          \        
-                 ()          ()        
-                  \          /          
-             _\/   \        /    \/_
-              \\   {`------'}    //
-               \\  /`---/',`\\  //
-                \/'     | |\ \`//
-                /'      | | \/ /\
-   __,. -- ~~ ~|        `\|      |~ ~~ -- . __
-               |                 |
-               \                 /
-                `._           _.'
-                   ^~- . -  ~^
-
-      """,
-      """ 
-                    .------,
-                    |______|
-                   _|_Ll___|_
-                  [__________]          
-                  /          \        
-                 ()          ()        
-                  \          /          
-             _\/   \        /    \/_
-              \\   {`------'}    //
-               \\  /`---/',`\\  //
-                \/'     | |\ \`//
-                /'      | | \/ /\
-   __,. -- ~~ ~|        `\|      |~ ~~ -- . __
-               |                 |
-               \                 /
-                `._           _.'
-                   ^~- . -  ~^
-
-      """,
-      """ 
-                    .------,
-                    |______|
-                   _|_Ll___|_
-                  [__________]         
-                  /          \        
-                 ()  o  o    ()        
-                  \          /          
-             _\/   \        /    \/_
-              \\   {`------'}    //
-               \\  /`---/',`\\  //
-                \/'  o  | |\ \`//
-                /'      | | \/ /\
-   __,. -- ~~ ~|    o   `\|      |~ ~~ -- . __
-               |                 |
-               \    o            /
-                `._           _.'
-                   ^~- . -  ~^
-
-      """,
-      """ 
-                    .------,
-      .\/.          |______|
-    _\_}{_/_       _|_Ll___|_
-     / }{ \       [__________]          .\/.
-      '/\'        /          \        _\_\/_/_
-                 ()  o  o    ()        / /\ \
-                  \ ~~~   .  /          '/\'
-             _\/   \ '...'  /    \/_
-              \\   {`------'}    //
-               \\  /`---/',`\\  //
-                \/'  o  | |\ \`//
-                /'      | | \/ /\
-   __,. -- ~~ ~|    o   `\|      |~ ~~ -- . __
-               |                 |
-               \    o            /
-                `._           _.'
-                   ^~- . -  ~^
-
-      """,
-    ]
-
-
 def display_snowman(lives):
 
     return snowman.steps[lives]
+
+
+def display_rules():
+    print(snowman.RULES)
+    print("Do you want to start the game? Y/N")
+    y_n_answer = input("Y/N: ")
+    if y_n_answer.upper() == "Y":
+        start(ge)
+    elif y_n_answer.upper() == "N":
+        welcome_msg()
+    else:
+        print("please enter y/n ")
+
 
 welcome_msg()
 get_word()
