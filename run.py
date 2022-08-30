@@ -1,12 +1,13 @@
-import time
+'''
+ python libraries
+'''
 import random
+import time
+import colorama
+from colorama import Fore
 from wordslist import words
-
-# from snowman import steps
 import snowman
 
-import colorama 
-from colorama import Fore
 colorama.init(autoreset=True)
 
 
@@ -17,7 +18,7 @@ def get_word():
 
 def start(word):
     """
-        This function will be loaded when the start button (1) 
+        This function will be loaded when the start button (1)
         is pressed from the button options
     """
     letter_dashes = '-' * len(word)
@@ -37,7 +38,7 @@ def start(word):
                 time.sleep(0.6)
                 print(f"\n{Fore.RED}Wrong Answer\n")
                 print(f"{Fore.MAGENTA}Try Another Letter!")
-                lives -= 1 
+                lives -= 1
                 guessed_letter.append(secret_letter)
             else:
                 time.sleep(0.5)
@@ -46,7 +47,8 @@ def start(word):
 
                 # changing the dashed lines to string list
                 ocurences = list(letter_dashes)
-                find_ocurrences = [i for i, letter in enumerate(word) if letter == secret_letter]
+                find_ocurrences = [i for i, letter in enumerate(word)
+                                   if letter == secret_letter]
                 for index in find_ocurrences:
                     ocurences[index] = secret_letter
                 letter_dashes = "".join(ocurences)
@@ -58,7 +60,6 @@ def start(word):
         print("Word: ", letter_dashes)
         print("Guessed Letters: ", guessed_letter)
         print("lives:", lives, "\n")
-    
     # condition for win and lose in the game
         if lives == 0:
             print(f"{Fore.RED}YOU LOST, Better Luck Next Time :)")
@@ -73,7 +74,7 @@ def start(word):
                 print(f"{Fore.MAGENTA}we are excited for you!\n")
                 print("Do you want to play again? Y/N")
                 re_start()
-                     
+
 
 def game_options():
     print("\n")
@@ -88,7 +89,7 @@ def game_options():
     else:
         print(f"{Fore.RED}Please Choose 1 or 2")
         game_options()
-        
+
 
 # this function will appear at the beginning of the game
 def welcome_msg():
@@ -119,7 +120,7 @@ def welcome_msg():
     print("Welcome to the Snowman!\n")
     # keep asking for name untill S
     while True:
-        name = input("What should we call you? \n") 
+        name = input("What should we call you? \n")
         if name.isalpha():
             print(f"\tWe are happy to have you {Fore.BLUE}{name}")
             print(f"\t{Fore.YELLOW}Hope you have fun and learn!")
@@ -128,7 +129,7 @@ def welcome_msg():
             print(f"\n{Fore.RED}You Can Only Use Alphabets (A_Z)\n")
 
     # Displaying game options
-    game_options()    
+    game_options()
 
 
 def display_snowman(lives):
@@ -140,7 +141,7 @@ def display_rules():
     print(snowman.RULES)
     print(f"{Fore.YELLOW} Do you want to start the game? Y/N")
     re_start()
-    
+
 
 def re_start():
     while True:
@@ -156,7 +157,7 @@ def re_start():
 
 def main():
     welcome_msg()
-    re_start()    
+    re_start()
 
 
 main()
