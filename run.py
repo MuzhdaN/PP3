@@ -28,11 +28,11 @@ def start(word):
         secret_letter = input("please enter a letter: ").upper()
         if len(secret_letter) == 1 and secret_letter.isalpha():
             if secret_letter in guessed_letter:
-                print(f"{Fore.CYAN}You Have Already Guessed This Letter!")
+                print(f"\n{Fore.CYAN}You Have Already Guessed This Letter!\n")
                 print(f"{Fore.MAGENTA}Try Another Letter!")
                 lives -= 1
             elif secret_letter not in word:
-                print(f"\n{Fore.RED}Wrong Answer")
+                print(f"\n{Fore.RED}Wrong Answer\n")
                 print(f"{Fore.MAGENTA}Try Another Letter!")
                 lives -= 1 
                 guessed_letter.append(secret_letter)
@@ -47,7 +47,7 @@ def start(word):
                     ocurences[index] = secret_letter
                 letter_dashes = "".join(ocurences)
         else:
-            print(f"{Fore.YELLOW}Enter Letters Between A to Z")
+            print(f"\n{Fore.YELLOW}Enter A Letter Between A to Z")
         print("the word is: ", word)
         # print("*****************************************************")
         print(display_snowman(lives))
@@ -57,8 +57,8 @@ def start(word):
     
     # condition for win and lose in the game
         if lives == 0:
-            print(f"{Fore.RED}YOU LOST, TRY AGAIN LATER")
-            print(f"{Fore.YELLOW}the correct word was: {Fore.GREEN}{word}\n")
+            print(f"{Fore.RED}YOU LOST, Better Luck Next Time :)")
+            print(f"\n{Fore.YELLOW}the correct word was: {Fore.GREEN}{word}\n")
             print(f"{Fore.YELLOW} Do you want to play again? Y/N")
             re_start()
         elif len(letter_dashes) == len(word):
@@ -139,13 +139,15 @@ def display_rules():
     
 
 def re_start():
-    y_n_answer = input("Y/N: ")
-    if y_n_answer.upper() == "Y":
-        start(get_word())
-    elif y_n_answer.upper() == "N":
-        welcome_msg()
-    else:
-        print(f"{Fore.RED} please enter y/n ")
+    while True:
+        y_n_answer = input("Y/N: ")
+        if y_n_answer.upper() == "Y" or y_n_answer.upper() == "YES":
+            start(get_word())
+        elif y_n_answer.upper() == "N" or y_n_answer.upper() == "NO":
+            # welcome_msg()
+            exit()
+        else:
+            print(f"\n{Fore.RED} please enter yes or no \n")
 
 
 def main():
