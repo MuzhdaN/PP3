@@ -26,7 +26,7 @@ def start(word):
     print(f"\n\t{Fore.BLUE}{letter_dashes}")
     print(display_snowman(lives))
     while lives > 0 and len(letter_dashes) > 0:
-        secret_letter = input("please enter a letter: ").upper()
+        secret_letter = input("please enter a letter: \n").upper()
         if len(secret_letter) == 1 and secret_letter.isalpha():
             if secret_letter in guessed_letter:
                 time.sleep(0.5)
@@ -80,7 +80,7 @@ def game_options():
     print(f"\n{Fore.MAGENTA} How you want to start? ")
     print("press 1 to start the game.")
     print("press 2 to read the rules.")
-    chose = input(" ")
+    chose = input(" \n")
     if chose == "1":
         start(get_word())
     elif chose == "2":
@@ -144,7 +144,7 @@ def display_rules():
 
 def re_start():
     while True:
-        y_n_answer = input("Y/N: ")
+        y_n_answer = input("Y/N: \n")
         if y_n_answer.upper() == "Y" or y_n_answer.upper() == "YES":
             start(get_word())
         elif y_n_answer.upper() == "N" or y_n_answer.upper() == "NO":
