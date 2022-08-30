@@ -1,7 +1,12 @@
 import random
 from wordslist import words
 
-from snowman import steps
+# from snowman import steps
+import snowman
+
+import colorama 
+from colorama import Fore
+colorama.init(autoreset=True)
 
 
 def get_word():
@@ -17,20 +22,22 @@ def start(word):
     letter_dashes = '-' * len(word)
     guessed_letter = []
     lives = 6
-    print(letter_dashes)
+    print(f"\n\t{Fore.BLUE}{letter_dashes}")
     print(display_snowman(lives))
     while lives > 0 and len(letter_dashes) > 0:
-        secret_letter = input("please enter an alphabet: ").upper()
+        secret_letter = input("please enter a letter: ").upper()
         if len(secret_letter) == 1 and secret_letter.isalpha():
             if secret_letter in guessed_letter:
-                print(("you have alredy guess the letter: ", secret_letter))
+                print(f"{Fore.CYAN}You Have Already Guessed This Letter!")
+                print(f"{Fore.MAGENTA}Try Another Letter!")
                 lives -= 1
             elif secret_letter not in word:
-                print("the letter is not in the word")
+                print(f"\n{Fore.RED}Wrong Answer")
+                print(f"{Fore.MAGENTA}Try Another Letter!")
                 lives -= 1 
                 guessed_letter.append(secret_letter)
             else:
-                print("well done", secret_letter, "is in the word")
+                print(f"\n{Fore.GREEN}Correct Answer\n")
                 guessed_letter.append(secret_letter)
 
                 # changing the dashed lines to string list
@@ -40,14 +47,13 @@ def start(word):
                     ocurences[index] = secret_letter
                 letter_dashes = "".join(ocurences)
         else:
-            print("enter letters between A to Z")
+            print(f"{Fore.YELLOW}Enter Letters Between A to Z")
         print("the word is: ", word)
-        print("\n ====================== \n")
+        print("*****************************************************")
         print(display_snowman(lives))
-        print(" \n Word: ", letter_dashes, "\n")
+        print("Word: ", letter_dashes)
         print("Guessed Letters: ", guessed_letter)
-        print("lives:", lives)
-        print("\n")
+        print("lives:", lives, "\n")
     
     # condition for win and lose in the game
         if lives == 0:
@@ -55,7 +61,10 @@ def start(word):
             print("the correct word was: ", word)
         elif len(letter_dashes) == len(word):
             if letter_dashes == word:
-                print("You won, Well done")
+                print(Fore.GREEN + snowman.WIN)
+                print(f"{Fore.YELLOW}Congratulation... \n")
+                print(f"{Fore.BLUE}YOU {Fore.GREEN}WON!!!\n")
+                print(f"{Fore.MAGENTA}we are excited for you!\n")
                 break
             
 
@@ -246,7 +255,7 @@ def welcome_msg():
 
 def display_snowman(lives):
 
-    return steps[lives]
+    return snowman.steps[lives]
 
 welcome_msg()
 get_word()
