@@ -1,3 +1,4 @@
+import time
 import random
 from wordslist import words
 
@@ -28,15 +29,18 @@ def start(word):
         secret_letter = input("please enter a letter: ").upper()
         if len(secret_letter) == 1 and secret_letter.isalpha():
             if secret_letter in guessed_letter:
+                time.sleep(0.5)
                 print(f"\n{Fore.CYAN}You Have Already Guessed This Letter!\n")
                 print(f"{Fore.MAGENTA}Try Another Letter!")
                 lives -= 1
             elif secret_letter not in word:
+                time.sleep(0.6)
                 print(f"\n{Fore.RED}Wrong Answer\n")
                 print(f"{Fore.MAGENTA}Try Another Letter!")
                 lives -= 1 
                 guessed_letter.append(secret_letter)
             else:
+                time.sleep(0.5)
                 print(f"\n{Fore.GREEN}Correct Answer\n")
                 guessed_letter.append(secret_letter)
 
@@ -48,7 +52,7 @@ def start(word):
                 letter_dashes = "".join(ocurences)
         else:
             print(f"\n{Fore.YELLOW}Enter A Letter Between A to Z")
-        print("the word is: ", word)
+        # print("the word is: ", word)
         # print("*****************************************************")
         print(display_snowman(lives))
         print("Word: ", letter_dashes)
