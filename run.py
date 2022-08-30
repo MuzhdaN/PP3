@@ -148,8 +148,9 @@ def re_start():
         print(f"{Fore.RED} please enter y/n ")
 
 
-welcome_msg()
-get_word()
+def main():
+    welcome_msg()
+    re_start()    
 
 
-
+main()
