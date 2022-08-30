@@ -16,10 +16,10 @@ def start(word):
     """
     letter_dashes = '-' * len(word)
     guessed_letter = []
-    lives = 5
+    lives = 6
     print(letter_dashes)
     print(display_snowman(lives))
-    while lives > 0:
+    while lives > 0 and len(letter_dashes) > 0:
         secret_letter = input("please enter an alphabet: ").upper()
         if len(secret_letter) == 1 and secret_letter.isalpha():
             if secret_letter in guessed_letter:
