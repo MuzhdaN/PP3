@@ -7,8 +7,8 @@ This game was desingned purely in Python. Also, this game is fun to play and wil
 
  
  
-Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
-  ![responsive Design Layouts](/assets/image/responsive-template.PNG)
+Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
+ ![responsive Design Layouts](images/am-i-responsive-game.PNG)
 
 ## Table of Contents
   * [Purpose of the project](#purpose-of-the-project)
@@ -16,8 +16,7 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
   * [Features](#features)
   * [Future Features](#future-features)
   * [Typography and color scheme](#typography-and-color-scheme)
-  * [Wireframes](#wireframes)
-  * [Technology](#technology)
+  * [Flow chart](#flow-chart)
   *  [Testing](#testing)
       * [Validator Testing](#validator-testing)
       * [Supported Screens and Browsers](#supported-screens-and-browsers)
@@ -31,22 +30,20 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
 
 
 ## User Stories
-- As visiting user, I would like to be able to be able to enter an ideal username.
-- As visiting user, I would like to see a friendly message at the begining of the game. 
+- As visiting user, I would like to see a friendly message at the begining of the game and enter my number. 
 - As visiting user, I would like to check the rules of the game. 
 - As visiting user, I would like to see the already guessed words
-- As visiting user, I would like to see error message, if i guessed the wrong word.
-- As visiting user, I would like to see message if i guessed already guessed word.
-- As visiting user, I would like to see the snowman being build if i guessed the wrong letter.
+- As visiting user, I would like to see error message, if i guessed the wrong or an already guessed letter.
+- As visiting user, I would like to see the snowman being build if i guessed the wrong or already guessed letter.
 - As visiting user, I would like to have five to six lives.
-- As visiting user, I would like to see the number of letters in a word, visually.
 - As visiting user, I would like to see the correct guessed letter in to dashed lines.
 - As visiting user, I would like to see the word, if i couldn't find all the letters of the word and lose all the chances (lives).
 - As visiting user, I would like to start the game after checking the rules.
 - As visiting user, I would like to have an option to re-strart the game if I lose or win.
 
-
+---
 ## Features
+
 - Welcome message at the beging of the game.
   ![welcome message CLI image](images/welcome-msg.PNG)
 
@@ -91,28 +88,27 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
 
 
 
-
+---
 ## Future Features
 - Add levels to the game.
 - Improve the game by displaying meaning of the words so the user could guess the word easily.
 
-
+---
 ## Typography and color scheme
   ### Typography
   - Font family, 'Arial' was used for this project.
   ### used colors: red, green, cyan, magenta, white, yellow
-  
+  ----
 
 ## Flow chart
-  
-  <details> <summary> Wireframes / prototypes </summary>
 
-  ![home page]()
-  ![recipes page]()
+  <details> <summary> image </summary>
+
+  ![flowchart image](images/Flowchart.png)
 
   </details>
 
-
+---
 ## Technology
   - Python 
 
@@ -126,9 +122,10 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
   - [Heroku](https://dashboard.heroku.com/apps)
   - [Github](https://github.com/)
   - [Gitpod](https://gitpod.io/)
-  - Am I responsive
+  - [Am I responsive](https://ui.dev/amiresponsive)
+  - [Lucid chart](https://www.lucidchart.com/)
   
-
+---
 ## Testing
 - PP8: Passed the code through PP8 validator and no bugs were founded.
 - Given invalid inputs: numbers when numbers were expected and out of bound inputs. 
@@ -140,7 +137,7 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
 
 
   ### Supported Screens and Browsers
-    - This site is not responsive to mobile devices.
+    - This site is not fully responsive in the mobile devices.
     - You can run this site in a PC.
 
 
@@ -159,7 +156,7 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
     - A comment was given between imports, which caused this error.
     - Solved by removing the comment, [source](https://www.flake8rules.com/rules/E402.html)
 
-  
+  ---
 
 ## Deployment 
   This site was developed in Gitpod and deployed using Code Institute's mock terminal for Heroku.
@@ -173,6 +170,7 @@ Visit the live [website](https://muzhdan.github.io/Foodie-blog_PP1/)
     - Deploy -> select enable automatic deploy or |deploy branch -> Deploy|
     - click open app from the menu to go to live website
 
+---
 ## Credits
   Thank to my mentor Rohit Sharma and Code Institute family who helped me throughout this project.
   
