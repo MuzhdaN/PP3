@@ -25,7 +25,6 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
   *  [Credits](#credits)
       * [Contents](#contents)
 
-
 -----
 
 
@@ -41,6 +40,7 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
 - As visiting user, I would like to start the game after checking the rules.
 - As visiting user, I would like to have an option to re-strart the game if I lose or win.
 
+#### [Back to Top](#table-of-contents)
 ---
 ## Features
 
@@ -87,7 +87,7 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
     ![won the game cli image](images/won-game.PNG)
 
 
-
+#### [Back to Top](#table-of-contents)
 ---
 ## Future Features
 - Add levels to the game.
@@ -97,7 +97,7 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
 ## Typography and color scheme
   ### Typography
   - Font family, 'Arial' was used for this project.
-  ### used colors: red, green, cyan, magenta, white, yellow
+  - Used colors: red, green, cyan, magenta, white, yellow
   ----
 
 ## Flow chart
@@ -108,6 +108,8 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
 
   </details>
 
+
+#### [Back to Top](#table-of-contents)
 ---
 ## Technology
   - Python 
@@ -125,6 +127,8 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
   - [Am I responsive](https://ui.dev/amiresponsive)
   - [Lucid chart](https://www.lucidchart.com/)
   
+
+#### [Back to Top](#table-of-contents)
 ---
 ## Testing
 - PP8: Passed the code through PP8 validator and no bugs were founded.
@@ -141,7 +145,7 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
     - You can run this site in a PC.
 
 
-## fixed bugs
+## Fixed bugs
 1. Trailing whitespace: 
     - Trailing whitespace is any spaces or tabs after the last non-whitespace character on the line until the newline.
     - I encoutred this syntax error, and solved it by deleting extra spaces from the end of the lines.
@@ -156,7 +160,9 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
     - A comment was given between imports, which caused this error.
     - Solved by removing the comment, [source](https://www.flake8rules.com/rules/E402.html)
 
-  ---
+
+#### [Back to Top](#table-of-contents)
+---
 
 ## Deployment 
   This site was developed in Gitpod and deployed using Code Institute's mock terminal for Heroku.
@@ -170,6 +176,7 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
     - Deploy -> select enable automatic deploy or |deploy branch -> Deploy|
     - click open app from the menu to go to live website
 
+#### [Back to Top](#table-of-contents)
 ---
 ## Credits
   Thank to my mentor Rohit Sharma and Code Institute family who helped me throughout this project.
@@ -183,3 +190,5 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
   - The list of random words were taken from [Stakoverflow](https://stackoverflow.com/questions/594273/how-to-pick-a-random-english-word-from-a-list)
   - The idea for time.sleep() was taken from [freeCodeCamp](https://www.freecodecamp.org/news/python-sleep-time-sleep-in-python/)
   - Replacing dashed with letter were taken from [stackoverflow2](https://stackoverflow.com/questions/61964490/how-to-replace-dash-with-letter-hangman) [stackoverflow2](https://stackoverflow.com/questions/57204695/replace-underscore-with-correct-guess-letter-python-hangman) and it was modifided. 
+
+#### [Back to Top](#table-of-contents)
