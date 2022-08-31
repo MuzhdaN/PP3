@@ -20,6 +20,9 @@ def start(word):
     """
         This function will be loaded when the start button (1)
         is pressed from the button options
+        Some part of this section was inspired from 
+        https://www.youtube.com/watch?v=m4nEnsavl6w&t=465s, 
+        However the code has been modified and extended
     """
     letter_dashes = '-' * len(word)
     guessed_letter = []
@@ -54,8 +57,6 @@ def start(word):
                 letter_dashes = "".join(ocurences)
         else:
             print(f"\n{Fore.YELLOW}Enter A Letter Between A to Z")
-        # print("the word is: ", word)
-        # print("*****************************************************")
         print(display_snowman(lives))
         print("Word: ", letter_dashes)
         print("Guessed Letters: ", guessed_letter)
@@ -99,9 +100,9 @@ def welcome_msg():
     ||::|:||   .--------,
     |:||:|:|   |_______ /        .-.
     ||::|:|| ."`  ___  `".    {\('v')/}
-    \\\/\///:  .'`   `'.  ;____`(   )'____
+    \/\/\///:  .'`   `'.  ;____`(   )'____
      \====/ './  o   o  \|~     ^" "^   //
-      \\//   |   ())) .  |   Ready to   /
+      \|//   |   ())) .  |   Ready to   //
        ||     \ `.__.'  /|              //
        ||   _{``-.___.-'\|    Play???   /
        || _." `-.____.-'`|    ___       //
