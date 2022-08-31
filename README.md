@@ -44,47 +44,50 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
 ---
 ## Features
 
-- Welcome message at the beging of the game.
-  ![welcome message CLI image](images/welcome-msg.PNG)
+- Welcome message at the beginning of the game. <br /> <br />
+  ![welcome message CLI image](images/welcome-msg.PNG) <br /> <br /> <br />
 
 - Asking for the username
 
-  ![username request CLI image](images/username-request.PNG)
+  ![username request CLI image](images/username-request.PNG) <br /> <br />
 
 - Menu options:
-	- Two options will be given to the user to start the game or go to the rules of the game
-  ![Options CLI image](images/options.PNG)
+	- Two options will be given to the user to start the game or go to the rules of the game <br /> <br />
+  ![Options CLI image](images/options.PNG) <br /> <br /> <br />
 
-- Game rules section
-  - Rules of the game will be displayed. After that user will be asked to start the game or not.
-    If the answer will be no, he will be returned to the main menu. If use, the game will start.
-  ![games rules CLI image](images/rules.PNG)
+- Game rules section:
+  - Rules of the game will be displayed. After that the user will be asked to start the game.
+  - If the answer will be no, he will be returned to the main menu. If use, the game will start. <br /> <br />
+  ![games rules CLI image](images/rules.PNG) <br /> <br /> <br /> 
 
-- Steps to show the Snowman drawing
-    When the game starts the user needs to find out the secret word by entering a letter.
+- Guess letter:
+  - User will be asked to guess a letter for the given secret word. <br /> <br />
+  ![step 1 image](images/step1.PNG) <br /> <br /> <br />
 
-    User will be asked to guess a letter for the secret word.
-    ![step 1 image](images/step1.PNG)
+- Correct Letter (Answer)
+  - If user enters a correct letter, a message will be shown and dashed line will be replaced by the letter.
+  - The snowman will not be build <br /> <br />
+  ![correct answer cli image](images/correct-asnwer.PNG) <br /> <br /> <br />
+ 
+- Wrong Letter (Answer)
+  - If user enters wrong letter, a red line message will appear and a live will be deducted. 
+  - The snowman will be build. <br /> <br />
+  ![wrong answer cli image](images/wrong-answer.PNG) <br /> <br /> <br />
 
-    If user enters correct letter, a message will be shown and dashed line will be replaced by the letter.
-    Also, the snowman will not be build
-    ![correct answer cli image](images/correct-asnwer.PNG)
+- Already Guessed Letter (Answer)
+  - If user guesses the already entered or gussed letter, another warning message will appear and a live will be deducted.
+  - The snowman will be build. <br /> <br />
+  ![already guessed answer cli image](/images/guessed-answer.PNG) <br /> <br /> <br />
 
-    If user enters wrong letter, a red line message will be shown and a live will be deducted. 
-    Also, the snowman will be build.
-    ![wron answer cli image](images/wrong-answer.PNG)
+- Game over
+  - If the user lose all the lives, then he will lose.
+  - The user will be asked to continue the game or not. <br /> <br />
+  ![game over cli image](images/game-over.PNG) <br /> <br /> <br />
 
-    If user guesses the already entered or gussed letter, another warning message will be shown and a live will be deducted.
-    Also, the snowman will be build.
-    ![already guessed answer cli image](/images/guessed-answer.PNG)
-
-    If the user lose all the lives, then he will lose.
-    The user will be asked to continue the game or not.
-    ![game over cli image](images/game-over.PNG)
-
-    If the user was able to guess the word before losing his all lives, he will win the game.
-    The user will be asked to continue the game or not.
-    ![won the game cli image](images/won-game.PNG)
+- Win The Game
+  - If the user was able to guess the word before losing his all lives, he will win the game.
+  - The user will be asked to continue the game or not. <br /> <br />
+  ![won the game cli image](images/won-game.PNG) <br /> <br />
 
 
 #### [Back to Top](#table-of-contents)
@@ -97,7 +100,7 @@ Visit the live website [in here](https://snowman-game-pp3.herokuapp.com/)
 ## Typography and color scheme
   ### Typography
   - Font family, 'Arial' was used for this project.
-  - Used colors: red, green, cyan, magenta, white, yellow
+  - Used Colorama library to use: red, green, cyan, magenta, white, yellow 
   ----
 
 ## Flow chart
